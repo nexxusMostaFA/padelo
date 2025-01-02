@@ -1,0 +1,131 @@
+/* Overall page styling */
+.contact-us-page {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between; /* Ensure content pushes the footer to the bottom */
+  align-items: center;
+  background-color: rgba(255, 255, 255, 0.5);
+  color: white;
+  font-family: Arial, sans-serif;
+  height: calc(100vh - 80px);
+  background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
+    /* Gradient overlay */ url("../assets/contact.avif"); /* Background image */
+  background-size: cover;
+  background-position: center;
+}
+
+/* Main content styling */
+.contact-us-content {
+  text-align: center;
+  padding: 30px;
+  border-radius: 10px;
+  width: 90%;
+  max-width: 600px;
+  position: relative;
+  z-index: 1; /* Ensure it is above the background */
+}
+
+/* Styling for content */
+.contact-us-content h1 {
+  font-size: 5rem;
+  font-weight: bold;
+  margin-bottom: 20px;
+}
+
+.contact-us-content p {
+  font-size: 3rem;
+  font-weight: bold;
+  margin: 15px 0;
+}
+
+.contact-detail {
+  font-size: 1.8rem;
+}
+
+/* Footer styling */
+.contact-us-footer {
+  margin-top: auto; /* Pushes footer to the bottom */
+  text-align: center;
+  padding: 20px;
+  color: white;
+  width: 100%;
+  position: relative;
+  z-index: 1;
+}
+
+.contact-us-footer p {
+  font-size: 3rem;
+  font-weight: bold;
+  margin-bottom: 10px;
+}
+
+.social-links {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+}
+
+.social-links a {
+  font-size: 1.5rem;
+  color: #08260f; /* Ensure icons are visible */
+  text-decoration: none;
+  transition: transform 0.3s, color 0.3s; /* Add transitions */
+}
+
+.social-links a:hover {
+  color: #156a28; /* Change color on hover */
+  transform: scale(1.2); /* Slight zoom effect */
+  text-decoration: none; /* Ensure no underline on hover */
+}
+
+/* Add hover effect for icons */
+.social-links span {
+  transition: transform 0.3s, color 0.3s;
+  cursor: pointer;
+}
+
+.social-links span:hover {
+  color: #6ADBED;
+  transform: scale(1.2);
+}
+
+/* Prevent horizontal scrolling */
+body,
+html {
+  margin: 0;
+  padding: 0;
+  overflow-x: hidden;
+}
+
+/* Ensure images and content do not overflow */
+img,
+.content {
+  max-width: 100%;
+  width: 100%;
+  display: block;
+}
+
+.green-icon {
+  color: white; /* Green color */
+}
+
+.email-link {
+  color: white; /* Green color for the link */
+  text-decoration: none;
+  font-weight: bold;
+}
+
+.email-link:hover {
+  text-decoration: underline;
+  color: #6ADBED;
+}
+
+.phone-number {
+  color: white; /* Green color */
+  font-weight: bold;
+  transition: color 0.3s;
+}
+
+.phone-number:hover {
+  color: #6ADBED; /* Darker green on hover */
+}

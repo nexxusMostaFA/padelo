@@ -1,0 +1,242 @@
+/* Default body styles */
+body {
+  margin: 0;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen",
+    "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue",
+    "Poppins", sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+html,
+body {
+  margin: 0;
+  background: linear-gradient(180deg, #f5f7f8, #e9eff2);
+  background-repeat: no-repeat;
+}
+
+body.admin-page {
+  background-image: url("../src/assets/fotor-ai-2024120862244.jpg");
+
+  background-color: #e0f7e0;
+  background-size: cover;
+  background-position: center; /* Center the background */
+  background-attachment: fixed; /* Keep the background fixed when scrolling */
+  text-align: center; /* Center text */
+  width: 100%; /* Ensure it spans the full width of the viewport */
+  height: 100%; /* Ensure the body takes up the full height of the document */
+}
+
+code {
+  font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
+    monospace;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+p {
+  margin: 0;
+}
+
+a {
+  text-decoration: none;
+}
+ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.main-logo,
+.main-btn {
+  font-family: "Montserrat", serif;
+}
+
+p,
+a,
+div,
+li {
+  font-family: "Ubuntu", serif;
+}
+
+input::placeholder,
+h2,
+h3 {
+  font-family: "Kanit", serif;
+}
+
+.container {
+  padding-left: 15px;
+  padding-right: 15px;
+  margin-left: auto;
+  margin-right: auto;
+}
+/* small */
+@media (min-width: 768px) {
+  .container {
+    width: 750px;
+  }
+}
+/* Medium */
+@media (min-width: 992px) {
+  .container {
+    width: 970px;
+  }
+}
+/* Large */
+@media (min-width: 1200px) {
+  .container {
+    width: 1170px;
+  }
+}
+
+/* extra */
+@media (min-width: 1400px) {
+  .container {
+    width: 1370px;
+  }
+}
+
+.main-logo {
+  text-transform: uppercase;
+  width: fit-content;
+  font-size: 32px;
+  font-weight: 600;
+  color: #3282b8;
+  position: relative;
+}
+.main-logo::after {
+  content: "";
+  position: absolute;
+  bottom: 7px;
+  right: -2px;
+  background-color: #009f89;
+  width: 3px;
+  height: 3px;
+  border-radius: 50%;
+}
+
+.main-btn {
+  cursor: pointer;
+  background-color: #3282b8;
+  border: none;
+  outline: none;
+  padding: 10px 20px;
+  color: white;
+  border-radius: 4px;
+  font-size: 21px;
+  font-weight: 600;
+  transition: 0.3s ease;
+  &:hover {
+    background-color: #0f4c75;
+  }
+}
+
+.sec-btn {
+  cursor: pointer;
+  width: 100px;
+  padding: 10px 20px;
+  font-weight: 500;
+  font-size: 19px;
+  text-align: center;
+  background-color: transparent;
+  color: #343a40;
+  border: 2px solid#343a40;
+  border-radius: 15px;
+  transition: 0.3s ease;
+
+  &:hover {
+    border-color: #3282b8;
+    color: #3282b8;
+  }
+}
+
+button:disabled {
+  cursor: not-allowed;
+  background-color: #b0bec5;
+  color: #eceff1;
+  opacity: 0.7;
+  transition: 0.3s ease;
+}
+
+/* Scrollbar Styling */
+::-webkit-scrollbar {
+  width: 10px; /* Width of the scrollbar */
+  height: 10px; /* Height for horizontal scrollbar */
+}
+
+::-webkit-scrollbar-thumb {
+  background-color: #767676; /* Scrollbar handle color */
+  border-radius: 10px; /* Rounded edges */
+  border: 2px solid #f5f7f8; /* Border around the scrollbar handle */
+}
+
+::-webkit-scrollbar-track {
+  background-color: #f5f7f8; /* Background of the scrollbar track */
+  border-radius: 10px; /* Optional for rounded track edges */
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background-color: #504e4e; /* Darker color on hover */
+}
+
+/* For Firefox */
+body {
+  scrollbar-color: #767676 #f5f7f8; /* Thumb color Track color */
+  scrollbar-width: thin; /* Makes the scrollbar thinner */
+}
+
+.spinner-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 420px;
+  background-color: transparent;
+}
+
+.spinner {
+  width: 50px;
+  height: 50px;
+  border: 5px solid rgba(0, 0, 0, 0.1);
+  border-top: 5px solid #767676;
+  border-radius: 50%;
+  animation: spin 1s linear infinite;
+}
+
+.spinner-container p {
+  margin-top: 10px;
+  font-size: 1.2rem;
+  color: #333;
+}
+
+.main-spinner-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+}
+
+.main-spinner {
+  font-size: 50px;
+  color: #767676;
+  animation: spin 1s linear infinite;
+}
+
+.main-spinner-container p {
+  margin-top: 15px;
+  font-size: 16px;
+  color: #555;
+}
+
+@keyframes spin {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}

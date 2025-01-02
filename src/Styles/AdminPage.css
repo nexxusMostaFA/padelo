@@ -1,0 +1,258 @@
+/* AdminPage.css */
+
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+  background-color: #f8f9fa;
+}
+
+.admin-page .admin-container {
+  display: flex;
+  min-height: 100vh;
+}
+
+.sidebar {
+  width: 10%;
+  background-color: #343a40;
+  color: #fff;
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  min-width: 280px;
+}
+
+.sidebar ul {
+  list-style: none;
+  padding: 0;
+  width: 100%;
+}
+
+.sidebar ul li {
+  padding: 15px;
+  cursor: pointer;
+  text-align: left;
+  width: 100%;
+  color: #adb5bd;
+  border-radius: 5px;
+  transition: background-color 0.3s, color 0.3s;
+}
+
+.sidebar ul li.active,
+.sidebar ul li:hover {
+  background-color: #495057;
+  color: #fff;
+}
+
+.content {
+  width: 100%;
+  padding: 20px;
+  background-color: #fff;
+  border-left: 1px solid #dee2e6;
+}
+
+.active-section h2 {
+  color: #343a40;
+  margin-bottom: 20px;
+}
+
+.admin-container form {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  max-width: 400px;
+}
+
+.active-section form input {
+  padding: 10px;
+  font-size: 14px;
+  border: 1px solid #ced4da;
+  border-radius: 5px;
+  width: 100%;
+}
+
+.active-section form button.save-button {
+  padding: 10px;
+  background-color: #007bff;
+  color: #fff;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+form button.save-button:hover {
+  background-color: #0056b3;
+}
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 20px;
+}
+
+table thead {
+  background-color: #f8f9fa;
+}
+
+table th,
+table td {
+  text-align: left;
+  padding: 10px;
+  border: 1px solid #dee2e6;
+}
+
+table tbody tr:nth-child(odd) {
+  background-color: #f8f9fa;
+}
+
+.edit-button,
+.delete-button {
+  padding: 5px 10px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 14px;
+}
+
+.edit-button {
+  background-color: #ffc107;
+  color: #212529;
+  margin-right: 10px;
+}
+
+.delete-button {
+  background-color: #dc3545;
+  color: #fff;
+}
+
+.edit-button:hover {
+  background-color: #e0a800;
+}
+
+.delete-button:hover {
+  background-color: #c82333;
+}
+
+.active-section input[type="text"],
+.active-section input[type="number"] {
+  max-width: 500px;
+}
+
+@media (max-width: 768px) {
+  .admin-page .admin-container {
+    flex-direction: column;
+  }
+
+  .sidebar {
+    width: 100%;
+    text-align: center;
+  }
+
+  .content {
+    width: 100%;
+  }
+
+  form input {
+    width: 100%;
+  }
+}
+
+/* Base styles for the table */
+.court-table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 20px;
+}
+
+.court-table th,
+.court-table td {
+  padding: 10px;
+  text-align: left;
+  border-bottom: 1px solid #ddd;
+}
+
+.court-table th {
+  background-color: #f4f4f4;
+}
+
+button {
+  padding: 5px 10px;
+  margin: 0 5px;
+  cursor: pointer;
+}
+
+.edit-button {
+  background-color: #4caf50;
+  color: white;
+  border: none;
+  border-radius: 4px;
+}
+
+.delete-button {
+  background-color: #f44336;
+  color: white;
+  border: none;
+  border-radius: 4px;
+}
+
+.court-table {
+  width: 100%;
+  border-collapse: collapse;
+  margin: 20px 0;
+}
+
+.court-table th,
+.court-table td {
+  border: 1px solid #ddd;
+  padding: 8px;
+  text-align: left;
+  white-space: nowrap; /* Prevent text wrapping */
+}
+
+.court-table th {
+  background-color: #f2f2f2;
+  text-align: center;
+}
+
+/* Responsive Wrapper */
+.table-responsive {
+  max-width: 1200px;
+  overflow-x: auto;
+  -webkit-overflow-scrolling: touch;
+  margin-bottom: 20px;
+  border: 1px solid #ddd; /* Optional for better visibility */
+  border-radius: 8px;
+}
+
+/* Smaller Screen Styles */
+@media (max-width: 768px) {
+  .court-table {
+    font-size: 14px; /* Reduce font size for smaller screens */
+  }
+
+  .court-table th,
+  .court-table td {
+    padding: 6px;
+  }
+
+  .court-table img {
+    width: 40px; /* Reduce image size for smaller screens */
+    height: 40px;
+  }
+}
+
+/* Extra Small Screens */
+@media (max-width: 480px) {
+  .court-table th,
+  .court-table td {
+    font-size: 12px; /* Further reduce font size */
+    padding: 4px;
+  }
+
+  .court-table img {
+    width: 30px;
+    height: 30px;
+  }
+}

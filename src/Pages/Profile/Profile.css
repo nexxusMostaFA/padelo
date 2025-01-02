@@ -1,0 +1,130 @@
+.profile .container {
+  height: calc(100vh - 80px);
+}
+.profile .container .user-data {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 30px;
+  padding: 56px 0;
+}
+.profile .container .user-data img {
+  width: 150px;
+  border-radius: 50%;
+}
+.profile .container .user-data .details {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+.profile .container .user-data .details h2 {
+  font-size: 40px;
+  font-weight: 500;
+  color: #185a8b;
+  margin: 0;
+  letter-spacing: 1.3px;
+}
+.profile .container .user-data .details p {
+  color: #343a40;
+  font-size: 15px;
+  line-height: 1.3;
+}
+@media (max-width: 460px) {
+  .profile .container .user-data {
+    flex-direction: column;
+  }
+  .profile .container .user-data .details {
+    text-align: center;
+  }
+}
+.profile .container ul {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  gap: 20px;
+  border-bottom: 1px solid #e0e0e0;
+  padding-left: 20px;
+  padding-right: 20px;
+}
+.profile .container ul li a {
+  display: flex;
+  align-items: center;
+  color: #767676;
+  height: 55px;
+  padding: 0 15px;
+  overflow: hidden;
+  position: relative;
+  transition: 0.3s ease;
+}
+.profile .container ul li a::after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: -200%;
+  width: 110%;
+  height: 1px;
+  background-color: #3282b8;
+  box-shadow: 0 0 5px #3282b8, 0 0 10px #3282b8, 0 0 20px #3282b8, 0 0 30px #3282b8;
+  transition: all 0.3s ease;
+}
+.profile .container ul li.active a, .profile .container ul li:hover a {
+  color: #3282b8;
+}
+.profile .container ul li.active a::after, .profile .container ul li:hover a::after {
+  left: 0;
+}
+.profile .container .outlet-box {
+  padding: 20px 35px;
+}
+
+/* Edit Section Styling */
+.edit-section {
+  margin-top: 50px;
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+/* Wrapper for input and button */
+.edit-row {
+  display: flex;
+  gap: 10px; /* Space between input and button */
+  align-items: center;
+}
+
+.edit-row input {
+  width: 600px;
+  padding: 10px;
+  font-size: 14px;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+  box-sizing: border-box;
+}
+
+.edit-row button {
+  width: 200px;
+  padding: 10px;
+  font-size: 14px;
+  background-color: #007bff;
+  color: white;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+  white-space: nowrap; /* Prevent button text from wrapping */
+}
+
+.edit-row button:hover {
+  background-color: #0056b3;
+}
+
+/* Responsive Design */
+@media (max-width: 600px) {
+  .edit-row {
+    flex-direction: column; /* Stack inputs and buttons on small screens */
+  }
+  .edit-row input,
+  .edit-row button {
+    width: 100%; /* Make elements take full width */
+  }
+}/*# sourceMappingURL=Profile.css.map */

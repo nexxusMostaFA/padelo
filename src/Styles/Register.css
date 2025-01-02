@@ -1,0 +1,187 @@
+:root {
+  --primary-color: #4caf50;
+  --secondary-color: #08260f;
+  --background-color: #e0f7e0;
+}
+
+body,
+html {
+  margin: 0;
+  padding: 0;
+  font-family: Arial, sans-serif;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+.register-container {
+  display: flex;
+  flex-direction: row;
+  min-height: 100vh;
+  width: 100%;
+}
+.to-login {
+  width: 50%;
+  position: relative;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+.to-login img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: -1;
+}
+.logo1 {
+  font-size: 36px;
+  font-weight: bold;
+  color: var(--secondary-color);
+  text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.7);
+  text-align: center;
+  z-index: 1;
+}
+.login1 {
+  background-color: var(--primary-color);
+  color: var(--secondary-color);
+  font-weight: bold;
+  font-size: 18px;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+.login1:hover {
+  background-color: #45a049; /* Slightly darker green for hover */
+}
+
+.login1:focus {
+  outline: 2px solid var(--secondary-color);
+}
+
+.register-form {
+  width: 50%;
+  background-color: var(--background-color);
+  padding: 40px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.form-style {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  max-width: 400px;
+}
+
+.form-style label {
+  display: block;
+  margin-bottom: 5px;
+  font-weight: bold;
+  color: var(--secondary-color);
+}
+
+.register-form input {
+  margin-bottom: 20px;
+  padding: 10px;
+  border: 1px solid var(--primary-color);
+  border-radius: 5px;
+  font-size: 16px;
+  width: 100%;
+  outline: none;
+}
+
+.register-form input:focus {
+  box-shadow: 0 0 13px 0px #4caf50a8;
+}
+
+.register-button {
+  background-color: var(--primary-color);
+  color: var(--secondary-color);
+  font-weight: bold;
+  font-size: 18px;
+  border: none;
+  padding: 10px;
+  border-radius: 5px;
+  width: 60%;
+  margin: 0 auto;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.register-button:hover {
+  background-color: #45a049; /* Slightly darker color for hover */
+}
+
+.register-button:focus {
+  outline: 2px solid var(--secondary-color);
+}
+
+.terms {
+  font-size: 14px;
+  margin: 0 0 20px 0;
+  text-align: center;
+}
+
+.terms a {
+  color: #003df3;
+  text-decoration: none;
+}
+
+/* Error Box Base */
+.error {
+  opacity: 0;
+  visibility: hidden;
+  transform: translateY(-20px);
+  transition: opacity 0.4s ease, transform 0.4s ease;
+  flex-direction: column;
+  margin-top: 20px;
+  gap: 5px;
+  padding: 15px;
+  border: 1px solid #eee;
+  border-left-width: 5px;
+  border-radius: 3px;
+  font-size: 14px;
+  border-left-color: #d9534f;
+  background-color: rgba(217, 83, 79, 0.1);
+}
+
+.error.show {
+  opacity: 1;
+  visibility: visible;
+  transform: translateY(0);
+}
+.error.show p {
+  margin: 0;
+}
+
+.error-heading {
+  color: #d9534f;
+  font-size: 17px;
+  font-weight: bold;
+  margin: 0 0 10px 0;
+}
+
+.pw-container {
+  position: relative;
+}
+
+.show-password {
+  cursor: pointer;
+  position: absolute;
+  right: 10px;
+  top: 50%;
+  transform: translateY(-50%);
+}
+/* Responsive Design */
+
+/* Not yet, Waiting requiring full ui improvement, Also for Login Page */

@@ -1,0 +1,276 @@
+//light
+$primary-color: #3282b8;
+$light-color: #f5f7f8;
+//dark
+$dark-primary-color: #185a8b;
+$h-color: #1b262c;
+$text-color: #343a40;
+// backgrounds
+$bg-color: $light-color;
+
+body {
+  font-family: Arial, sans-serif;
+  background-color: $bg-color;
+  margin: 0;
+  padding: 0;
+}
+
+.container {
+  .forgot-password {
+    cursor: pointer;
+    color: $primary-color;
+  }
+
+  .auth-box {
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    .box-content {
+      display: flex;
+      justify-content: space-around;
+      align-items: center;
+      background-image: linear-gradient(
+          114deg,
+          $bg-color 0%,
+          $bg-color 50%,
+          transparent 50%
+        ),
+        linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)),
+        url("../../assets/auth-bg.jpg");
+      background-position: right;
+      background-size: cover;
+      background-repeat: no-repeat;
+      width: 100%;
+      padding: 25px;
+      min-height: 450px;
+      gap: 20px;
+      border-radius: 12px;
+      box-shadow: 0 0 20px rgba(0, 0, 0, 0.3);
+      position: relative;
+
+      .form {
+        height: 100%;
+        width: 50%;
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 20px;
+        .back-to-home {
+          cursor: pointer;
+          border: none;
+          background-color: transparent;
+          color: $primary-color;
+          font-size: 18px;
+          font-weight: 600;
+          transition: 0.3s ease;
+          display: flex;
+          gap: 5px;
+
+          &:hover {
+            color: $dark-primary-color;
+          }
+        }
+        h2 {
+          margin: 0;
+          font-size: 2rem;
+          font-weight: 600;
+          color: $dark-primary-color;
+        }
+        .form-control {
+          display: flex;
+          flex-direction: column;
+          width: 500px;
+          min-height: 280px;
+          gap: 15px;
+          position: relative;
+
+          .input-container {
+            display: flex;
+            align-items: center;
+            border-radius: 2px;
+            border-left: 4px solid $primary-color;
+            border-right: 4px solid $primary-color;
+            position: relative;
+            .icon {
+              font-size: 19px;
+              display: flex;
+              justify-content: center;
+              align-items: center;
+              width: 50px;
+              height: 86px;
+              color: $dark-primary-color;
+              border-top: 1px solid #ddd;
+              border-bottom: 1px solid #ddd;
+            }
+            .col {
+              flex: 1;
+              display: flex;
+              flex-direction: column;
+              border-left: 1px solid #ddd;
+              border-top: 1px solid #ddd;
+              border-bottom: 1px solid #ddd;
+
+              label {
+                font-size: 16px;
+                color: $dark-primary-color;
+                padding: 10px;
+                border-bottom: 1px solid #ddd;
+                font-weight: 600;
+
+                &::after {
+                  content: "*";
+                  color: red;
+                  margin-left: 5px;
+                }
+              }
+              input {
+                flex: 1;
+                padding: 15px 40px 15px 10px;
+                border: none;
+                outline: none;
+                background-color: transparent;
+              }
+              .row {
+                display: flex;
+                justify-content: space-between;
+                align-items: center;
+                position: relative;
+                svg {
+                  cursor: pointer;
+                  color: $dark-primary-color;
+                  position: absolute;
+                  right: 10px;
+                  top: 50%;
+                  transform: translateY(-50%);
+                }
+              }
+            }
+
+            .validation-icon {
+              position: absolute;
+              right: 10px;
+              top: 10px;
+              font-size: 20px;
+              margin-left: 8px;
+              cursor: pointer;
+            }
+
+            .validation-icon.error {
+              color: #e84545;
+            }
+
+            .validation-icon.success {
+              color: #91c788;
+            }
+
+            .validation-icon:hover::after {
+              content: attr(title);
+              position: absolute;
+              background: rgba(0, 0, 0, 0.7);
+              color: white;
+              padding: 5px 10px;
+              border-radius: 4px;
+              white-space: nowrap;
+              font-size: 14px;
+              transform: translateY(-150%);
+            }
+          }
+          .error-general {
+            opacity: 0;
+            color: #e84545;
+            font-weight: 600;
+            transition: 0.3s ease;
+            &.visible {
+              opacity: 1;
+            }
+          }
+          .google {
+            display: block;
+            width: 100%;
+            color: $dark-primary-color;
+            font-size: 30px;
+            cursor: pointer;
+          }
+        }
+      }
+      .auth-switch {
+        width: 50%;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        h2 {
+          font-weight: 600;
+          color: $light-color;
+          font-size: 2rem;
+        }
+        p {
+          color: $light-color;
+          margin-bottom: 20px;
+          text-transform: capitalize;
+          letter-spacing: 3px;
+        }
+      }
+      @media (max-width: 1399px) {
+        .form {
+          .form-control {
+            width: 400px;
+          }
+        }
+      }
+      @media (max-width: 1200px) {
+        background-image: linear-gradient(
+            90deg,
+            $bg-color 0%,
+            $bg-color 50%,
+            transparent 49%
+          ),
+          linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)),
+          url("../../assets/auth-bg.jpg");
+        .form {
+          .form-control {
+            width: 400px;
+          }
+        }
+        .auth-switch {
+          h2 {
+            font-size: 1.6rem;
+            .main-logo {
+              font-size: 26px;
+            }
+          }
+        }
+      }
+      @media (max-width: 991px) {
+        background-image: linear-gradient(
+          114deg,
+          $bg-color 0%,
+          $bg-color 50%,
+          $bg-color 50%
+        );
+        flex-direction: column;
+        .form {
+          width: 100%;
+          position: relative;
+          .form-control {
+            width: 100%;
+          }
+        }
+        .auth-switch {
+          width: 100%;
+          flex-direction: row;
+          gap: 15px;
+          justify-content: center;
+          h2 {
+            display: none;
+          }
+          p {
+            color: $text-color;
+            margin: 0;
+          }
+        }
+      }
+    }
+  }
+}

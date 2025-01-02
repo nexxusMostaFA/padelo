@@ -1,0 +1,252 @@
+.padel-body {
+  margin: 0;
+  font-family: 'Poppins', sans-serif;
+
+  min-height: 100vh;
+  padding: 20px;
+}
+
+.padel-page-container {
+  max-width: 1370px;
+  margin: 0 auto;
+  background: rgb(51, 51, 51);
+  backdrop-filter: blur(10px);
+  border-radius: 20px;
+  padding: 30px;
+  box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.37);
+}
+
+.padel-court-header {
+  position: relative;
+  height: 300px;
+  border-radius: 20px;
+  overflow: hidden;
+  margin-bottom: 30px;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+}
+
+.padel-court-contact-info {
+  background: rgba(0, 0, 0, 0.7);
+  padding: 90px;
+/* background-image: url('../assets/fotor-ai-2024120862244.jpg'); */
+background-size: cover;
+background-position: center;
+  border-radius: 15px;
+  text-align: center;
+}
+
+.padel-court-contact-info h2 {
+  color: #602f2f;
+  font-size: 3rem;
+  margin: 0;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+  font-weight: bold;
+}
+
+.padel-court-contact-info p {
+  color: #602f2f;
+  font-size: 1.9rem;
+  margin: 10px 0;
+  font-weight: bold;
+}
+
+.padel-booking-section {
+  background: rgba(255, 255, 255, 0.1);
+  padding: 30px;
+  border-radius: 20px;
+  backdrop-filter: blur(10px);
+  margin-bottom: 30px;
+}
+
+.padel-booking-section h2 {
+  color: #fff;
+  font-size: 2rem;
+  margin-bottom: 20px;
+  text-align: center;
+}
+
+.padel-booking-form {
+  display: grid;
+  gap: 20px;
+}
+
+.padel-booking-form label {
+  color: #fff;
+  font-size: 1.1rem;
+  font-weight: 500;
+}
+
+.padel-booking-form input,
+.padel-booking-form select {
+  width: 100%;
+  padding: 15px;
+  border: none;
+  border-radius: 10px;
+  background: rgba(255, 255, 255, 0.2);
+  color: #fff;
+  font-size: 1rem;
+  backdrop-filter: blur(5px);
+}
+
+
+
+.padel-booking-form input:focus,
+.padel-booking-form select:focus {
+  outline: none;
+  box-shadow: 0 0 0 3px rgba(255, 255, 255, 0.3);
+  outline: 2px solid #F09819;
+
+}
+
+.padel-booking-form option {
+  background: #2a5298;
+  color: #fff;
+}
+
+.padel-booking-form button {
+  background: linear-gradient(45deg, #FF512F 0%, #F09819 100%);
+  color: white;
+  padding: 15px;
+  border: none;
+  border-radius: 10px;
+  font-size: 1.1rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: transform 0.3s ease;
+
+}
+
+.padel-booking-form button:hover {
+  transform: translateY(-2px);
+  background: linear-gradient(45deg, #FF512F 0%, #ff9500 100%);
+
+}
+
+
+.padel-slots-section {
+  background: rgba(255, 255, 255, 0.1);
+  padding: 30px;
+  border-radius: 20px;
+  backdrop-filter: blur(10px);
+  margin-bottom: 30px;
+}
+
+.padel-slots-section h3 {
+  color: #fff;
+  font-size: 1.8rem;
+  margin-bottom: 20px;
+  text-align: center;
+}
+
+.padel-slots-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(180px, 1fr));
+  gap: 15px;
+}
+
+.padel-slot {
+  padding: 15px;
+  text-align: center;
+  border-radius: 15px;
+  font-weight: 500;
+  transition: all 0.3s ease;
+  
+}
+@keyframes pulse {
+  0% {
+    transform: scale(1);
+    
+  }
+  50% {
+    transform: scale(1.05);
+
+  }
+  100% {
+    transform: scale(1);
+   
+  }
+}
+.padel-slot-available {
+  background: linear-gradient(45deg, #00b09b, #96c93d);
+  color: white;
+  cursor: pointer;
+  animation: pulse 2s infinite;
+  font-size: 15px;
+  
+}
+
+.padel-slot-available:hover {
+  transform: scale(1.05);
+  
+}
+
+.padel-slot-reserved {
+  background: linear-gradient(45deg, #ff416c, #ff4b2b);
+  color: white;
+  
+}
+
+.padel-ratings-section {
+  background: rgba(255, 255, 255, 0.1);
+  padding: 30px;
+  border-radius: 20px;
+  backdrop-filter: blur(10px);
+  margin-bottom: 30px;
+  text-align: center;
+  color: #fff;
+}
+
+.padel-map-section {
+  background: rgba(255, 255, 255, 0.1);
+  padding: 30px;
+  border-radius: 20px;
+  backdrop-filter: blur(10px);
+}
+
+.padel-map-section iframe {
+  width: 100%;
+  height: 400px;
+  border-radius: 15px;
+  margin-bottom: 20px;
+}
+
+.padel-map-footer {
+  background: rgba(255, 255, 255, 0.2);
+  padding: 15px;
+  border-radius: 10px;
+  text-align: center;
+}
+
+.padel-map-footer a {
+  color: #fff;
+  text-decoration: none;
+  font-weight: 600;
+  transition: all 0.3s ease;
+}
+
+.padel-map-footer a:hover {
+  color: #F09819;
+  text-decoration: underline;
+}
+
+@media (max-width: 768px) {
+  .padel-body {
+    padding: 10px;
+  }
+  
+  .padel-page-container {
+    padding: 15px;
+  }
+  
+  .padel-court-header {
+    height: 200px;
+  }
+  
+  .padel-court-contact-info h2 {
+    font-size: 2rem;
+  }
+  
+  .padel-slots-grid {
+    grid-template-columns: 1fr 1fr;
+  }
+}
